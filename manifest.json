@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Multi-Window Tab Rotator",
+    "version": "0.1.0",
+    "action": { "default_popup": "popup.html" },
+    "background": { "service_worker": "background.js", "type": "module" },
+    "permissions": ["tabs", "windows", "storage", "offscreen"],
+    "host_permissions": [],
+    "minimum_chrome_version": "109",
+    "icons": {
+        "16": "icons/Multi-Window_Tab_Rotator_icon16.png",
+        "48": "icons/Multi-Window_Tab_Rotator_icon48.png",
+        "128": "icons/Multi-Window_Tab_Rotator_icon128.png"
+    }
+}

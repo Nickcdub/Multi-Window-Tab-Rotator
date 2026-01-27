@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font: 14px system-ui; width: 300px; padding: 12px; margin: 0; }
+      .row { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
+      .row > label { flex: 1; }
+      input[type="number"] { width: 90px; }
+
+      button { margin-top: 10px; width: 100%; padding: 8px; }
+
+      .status {
+        margin-top: 12px;
+        font-size: 12px;
+        opacity: 0.85;
+        line-height: 1.4;
+        white-space: pre-line;
+      }
+
+      /* Compact toggle switch */
+      label.switch {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 18px;
+        flex: 0 0 auto;
+      }
+      label.switch input { opacity: 0; width: 0; height: 0; }
+
+      label.switch .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: #ccc;
+        transition: 0.2s;
+        border-radius: 999px;
+      }
+
+      label.switch .slider::before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        left: 2px;
+        top: 2px;
+        background-color: #fff;
+        transition: 0.2s;
+        border-radius: 50%;
+        transform: translateX(0);
+      }
+
+      label.switch input:checked + .slider { background-color: #4caf50; }
+      label.switch input:checked + .slider::before { transform: translateX(16px); }
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+      <label for="interval">Interval (sec)</label>
+      <input id="interval" type="number" min="5" value="10" />
+    </div>
+
+    <div class="row">
+      <label for="focusToggle">Focus window while rotating</label>
+      <label class="switch">
+        <input id="focusToggle" type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="row">
+      <label for="refreshOnRotate">Refresh on tab switch</label>
+      <label class="switch">
+        <input id="refreshOnRotate" type="checkbox" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <button id="start">Start rotation for this window</button>
+    <button id="stop">Stop rotation for this window</button>
+
+    <div class="status" id="status">Loading…</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
