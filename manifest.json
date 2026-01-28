@@ -4,7 +4,7 @@
     "version": "0.1.0",
     "action": { "default_popup": "popup.html" },
     "background": { "service_worker": "background.js", "type": "module" },
-    "permissions": ["tabs", "windows", "storage", "offscreen"],
+    "permissions": ["windows", "storage", "offscreen"],
     "host_permissions": [],
     "minimum_chrome_version": "109",
     "icons": {
