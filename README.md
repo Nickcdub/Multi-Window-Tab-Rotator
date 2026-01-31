@@ -1,8 +1,8 @@
-Multi-Window Tab Rotator
+##Multi-Window Tab Rotator
 
 Multi-Window Tab Rotator lets you automatically rotate tabs in one or more Chrome windows at a configurable interval. Each window can be controlled independently, making it useful for dashboards, monitoring displays, or any workflow where multiple tabs need to cycle automatically.
 
-Features
+##Features
 
 Rotate tabs in one or more Chrome windows
 
@@ -16,7 +16,7 @@ Start and stop rotation per window
 
 Works on macOS, Windows, and Linux
 
-How to Use
+##How to Use
 
 Open one or more Chrome windows with multiple tabs.
 
@@ -32,7 +32,7 @@ Note: The Focus and Refresh toggles do not take effect until rotation is started
 
 Click Stop to disable rotation for the current window. Each window can be configured independently.
 
-Permissions
+##Permissions
 
 windows – Used to identify and optionally focus Chrome windows.
 
@@ -42,6 +42,6 @@ offscreen – Used to maintain reliable timing under Manifest V3.
 
 No browsing data is collected or transmitted.
 
-Development
+##Development
 
 This extension is built using Chrome Manifest V3 and does not load remote code. All logic runs locally in the browser.
